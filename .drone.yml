@@ -1,0 +1,19 @@
+build:
+  image: armhfbuild/golang:$$GO_VERSION
+  commands:
+    - go get
+    - go build
+
+matrix:
+  GO_VERSION:
+    - 1.6
+    - 1.5
+
+notify:
+  irc:
+    prefix: Portfolio Build
+    nick: Depadrone
+    channel: n0sec-bot
+    server:
+      host: irc.freenode.net
+      port: 6667
