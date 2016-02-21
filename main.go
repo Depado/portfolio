@@ -14,10 +14,9 @@ func main() {
 	var err error
 
 	tbox, _ := rice.FindBox("templates")
-	abox, _ := rice.FindBox("assets")
 
 	r := gin.Default()
-	if err = utils.InitAssetsTemplates(r, tbox, abox, "index.html"); err != nil {
+	if err = utils.InitAssetsTemplates(r, tbox, nil, "index.html"); err != nil {
 		log.Fatal(err)
 	}
 	r.GET("/", func(c *gin.Context) {
