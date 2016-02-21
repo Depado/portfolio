@@ -4,9 +4,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Depado/articles/rice-gin/utils"
 	"github.com/GeertJohan/go.rice"
 	"github.com/gin-gonic/gin"
+
+	"github.com/Depado/portfolio/utils"
 )
 
 func main() {
