@@ -1,0 +1,20 @@
+.parallax-container {
+    height: 300px;
+}
+
+.section {
+    background: url(/static/img/background.png) repeat;
+}
+
+.header {
+    color: #EE6E73;
+    font-weight: 300;
+}
+
+.salmon {
+    color: #EE6E73;
+}
+
+.card .card-action a {
+    color: black;
+}

@@ -15,6 +15,7 @@ func main() {
 
 	tbox, _ := rice.FindBox("templates")
 
+	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 	if err = utils.InitAssetsTemplates(r, tbox, nil, "index.html"); err != nil {
 		log.Fatal(err)
@@ -22,5 +23,5 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
-	r.Run(":8093")
+	r.Run(":8005")
 }
